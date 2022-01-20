@@ -1,0 +1,123 @@
+.html{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+@media  (max-width:768px){
+    .navbar-header{
+        width: 100%;
+    }
+    .navbar-default .navbar-brand {
+        color: rgb(204, 26, 26);
+        font-size: 2.2rem;
+        margin-left: 4rem;
+    }
+}
+.navbar {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+    background-color: #4278ff;
+ 
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+.navbar-default .navbar-brand {
+    color: #fff;
+    font-size: 2.2rem;
+}
+.navbar-default .navbar-brand:hover {
+    color: #fff;
+}
+.navbar-nav li a{
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+.navbar-nav  li a:hover {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff !important;
+} 
+.heading{
+    color: #4299e6;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 3rem;
+}
+.cards{
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+    border: 2px solid #4278ff;
+    border-radius: 5px;
+}
+.row{
+    display: flex;
+    
+}
+.title-div{
+    width: 90%;
+    position: relative;
+    left: 1rem;
+}
+.oper{
+    width: 10%;
+    display: flex;
+}
+.oper .fa-trash{
+    position: relative;
+    right: 10px;
+    top: 20px;
+}
+.oper .fa-pencil{
+    position: relative;
+    right: 30px;
+    top: 20px;
+}
+.post-title{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    
+    font-size: 35px;
+
+}
+.post-content{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+.text-area{
+    height: 70px;
+}
+
+.footer {
+    display: none;
+    position: absolute;
+	width: 100%;
+    height: 60px;
+    bottom: 0;
+    text-align: center;
+    justify-content: center;
+    font-size: 12px;
+    letter-spacing: 5px;
+    background-color: #4278ff;
+}
+
+.footer p {
+	margin-top: 25px;
+	font-size: 12px;
+  color: #fff;
+}
