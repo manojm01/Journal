@@ -4,7 +4,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const _ = require("lodash")
 const mongoose = require('mongoose');
-const e = require("express");
 require('./models/db');
 var Task = mongoose.model('Task');
 
@@ -26,12 +25,12 @@ app.get("/",(req,res)=>{
   })
 
 })
-app.get("/about",(req,res)=>{
-  res.render("about",{aboutc:aboutContent,})
-})
-app.get("/contact",(req,res)=>{
-  res.render("contact",{contactc:contactContent})
-})
+// app.get("/about",(req,res)=>{
+//   res.render("about",{aboutc:aboutContent,})
+// })
+// app.get("/contact",(req,res)=>{
+//   res.render("contact",{contactc:contactContent})
+// })
 app.get("/compose",(req,res)=>{
   var post={
     title:"",
