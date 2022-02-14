@@ -13,7 +13,7 @@
     .navbar-default .navbar-brand {
         color: rgb(204, 26, 26);
         font-size: 2.2rem;
-        margin-left: 4rem;
+        margin-left: 10rem;
     }
 }
 .navbar {
@@ -59,10 +59,11 @@
     margin-bottom: 3rem;
 }
 .cards{
-    margin: 1rem 0;
+    margin: 3rem 0;
     padding: 1rem 2rem;
-    border: 2px solid #4278ff;
+    border-left: 10px solid #4278ff;
     border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .row{
     display: flex;
@@ -90,14 +91,14 @@
 .post-title{
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    
+    margin-bottom: 30px;
     font-size: 35px;
-
 }
 .post-content{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 20px;
+    
 }
 .text-area{
     height: 70px;
