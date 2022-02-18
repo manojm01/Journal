@@ -14,8 +14,8 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-app.get("/",(req,res)=>{
-  Task.find((err,docs)=>{
+app.get("/",async (req,res)=>{
+  await Task.find((err,docs)=>{
     if(!err){
       res.render("home",{posts:docs})
     }
@@ -90,8 +90,8 @@ app.get('/:id', async (req,res)=>{
 })
 
 
-app.get('/delete/:id', (req,res)=>{
-  Task.findByIdAndRemove(req.params.id, (err,doc)=>{
+app.get('/delete/:id', async(req,res)=>{
+  await Task.findByIdAndRemove(req.params.id, (err,doc)=>{
     if(!err){
       res.redirect('/');
     }
