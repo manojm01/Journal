@@ -1,9 +1,9 @@
 //jshint esversion:6
-
+require('dotenv').config()
 const express = require("express");
 const bodyParser = require("body-parser");
 const _ = require("lodash")
-const port = 4000;
+const port = Process.env.PORT || 3000 
 const mongoose = require('mongoose');
 require('./models/db');
 var Task = mongoose.model('Task');
@@ -103,6 +103,6 @@ app.get('/delete/:id', async(req,res)=>{
 })
 
 
-app.listen(process.env.PORT || port, () => {
-  console.log('Express server started at port : ${port}');
+app.listen(port,()=>{  // do not add localhost here if you are deploying it
+  console.log("server listening to port "+port);
 });
