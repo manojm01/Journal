@@ -3,6 +3,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const _ = require("lodash")
+const port = 4000;
 const mongoose = require('mongoose');
 require('./models/db');
 var Task = mongoose.model('Task');
@@ -22,7 +23,7 @@ app.get("/",async (req,res)=>{
     else{
       console.log('Error in retrieving task list :' + err);
     }
-  })
+  }).clone().catch(function(err){ console.log(err)})
 
 })
 // app.get("/about",(req,res)=>{
@@ -51,7 +52,7 @@ function insertRecord(req,res){
   
   task.save()
   .then(data =>{
-    console.log(data);
+    console.log("Post added");
   })
   .catch(err=>{
     console.log(err);
@@ -98,10 +99,10 @@ app.get('/delete/:id', async(req,res)=>{
     else{
       console.log("error while deleting"+err);
     }
-  })
+  }).clone().catch(function(err){ console.log(err)})
 })
 
 
-app.listen(4000, function() {
-  console.log("Server started on port 4000");
+app.listen(process.env.PORT || port, () => {
+  console.log('Express server started at port : ${port}');
 });
